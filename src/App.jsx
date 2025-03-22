@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="w-screen">
-      <div className='w-screen m-0 pt-0 pb-0 flex flex-row h-screen justify-center'>
+      <div className='w-full m-0 pt-0 pb-0 flex flex-row h-screen justify-center'>
         <header className='flex justify-end'>
           <NavBar/>
         </header>

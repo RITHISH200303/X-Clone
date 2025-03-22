@@ -17,6 +17,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import "../../public/navBar.css";
 import BlackBtn from "./buttons/BlackBtn";
 import NavLabel from "../components/labels/NavLabel";
+import ProfileCont from "../components/simpleContainers/ProfileCont"
 const logoData = [
   { label: "Home", icon: Home },
   { label: "Explore", icon: Search },
@@ -63,7 +64,9 @@ function NavBar() {
         </div>
       </div>
       {/* Profile Section */}
-      <div className="profileCont">q</div>
+      <div className="profileCont">
+        <ProfileCont></ProfileCont>
+      </div>
     </div>
   );
 }
