@@ -1,6 +1,6 @@
 
-export default function Navlabel({children}){
+export default function Navlabel({children, className}){
     return(
-        <label className="text-2xl" htmlFor="">{children}</label>
+        <label className={className} htmlFor="">{children}</label>
     )
 };
