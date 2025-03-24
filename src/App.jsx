@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from './components/NavBar'
+import MainBody from './components/MainBody'
 import './App.css'
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
           <NavBar/>
         </header>
         <main className="w-3/5">
-
+          <MainBody></MainBody>
         </main>
       </div>
     </div>

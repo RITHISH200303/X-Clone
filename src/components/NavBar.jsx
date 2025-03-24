@@ -50,11 +50,11 @@ function NavBar() {
             return (
               <div
                 key={index}
-                className={`flex items-center cursor-pointer m-1 px-2 py-2.5 rounded-full hover:bg-gray-200 "}`}
+                className={`w-fit flex items-center cursor-pointer m-1 p-3 rounded-full hover:bg-gray-200 "}`}
                 onClick={() => setActiveIndex(index)}
               >
                 <Icon className={`w-6 h-6 mr-2 ${isActive ? "stroke-[2.5] text-black" : "stroke-[1.5] text-zinc-700"}`} />
-                <NavLabel className={`${isActive ? "font-bold text-black":"text-zinc-700"} text-xl`}>{item.label}</NavLabel>
+                <NavLabel className={`${isActive ? "font-bold text-black":"text-zinc-700"}`}>{item.label}</NavLabel>
               </div>
             );
           })}
