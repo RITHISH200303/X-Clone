@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import MainBody from './components/MainBody'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
         <header className='flex justify-end'>
           <NavBar/>
         </header>
-        <main className="w-3/5">
-          <MainBody></MainBody>
+        <main className='w-3/5 flex flex-row'>
+          <MainBody className="relative w-3/5"></MainBody>
+          <Footer className="w-2/5"></Footer>
         </main>
       </div>
     </div>

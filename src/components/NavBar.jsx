@@ -36,11 +36,11 @@ function NavBar() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <div className="w-60 px-1 flex flex-col justify-between h-full navBar">
+    <div className="w-60 px-1 py-2 flex flex-col justify-between h-full navBar">
 
       <div className="w-full flex flex-col">
-        <div className="logoCont text-left m-1 py-2 w-fit">
-        <FontAwesomeIcon icon={faXTwitter} size="2xl" className="flex items-center cursor-pointer px-2 py-2 rounded-full hover:bg-gray-200 " />
+        <div className="logoCont text-left m-1 w-fit">
+        <FontAwesomeIcon icon={faXTwitter} size="2xl" className="flex items-center cursor-pointer px-3 rounded-full hover:bg-gray-200 " />
         </div>
 
         <div className="optionsCont flex flex-col">
@@ -50,7 +50,7 @@ function NavBar() {
             return (
               <div
                 key={index}
-                className={`w-fit flex items-center cursor-pointer m-1 p-3 rounded-full hover:bg-gray-200 "}`}
+                className={`w-fit flex items-center cursor-pointer m-1 p-3 rounded-full hover:bg-gray-200 text-xl`}
                 onClick={() => setActiveIndex(index)}
               >
                 <Icon className={`w-6 h-6 mr-2 ${isActive ? "stroke-[2.5] text-black" : "stroke-[1.5] text-zinc-700"}`} />
