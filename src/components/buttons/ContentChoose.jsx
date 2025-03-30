@@ -1,15 +1,26 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-export default function ContentChoose({ }) {
-    var [activeContentItem, setActiveContentItem] = useState("For you")
-    return (
-        <div className="fixed top-0 left-0 w-full z-50 flex flex-row justify-center">
-            <div className="w-1/2 flex justify-center py-3 font-semibold cursor-pointer">
-                For you
-            </div>
-            <div className="w-1/2 flex justify-center py-3 font-semibold cursor-pointer">
-                Following
-            </div>
-        </div>
-    )
-};
+export default function ContentChoose() {
+  const [activeTab, setActiveTab] = useState("For you");
+
+  return (
+    <div className="flex flex-row justify-center">
+      <div
+        className={`w-1/2 flex justify-center py-3 font-semibold cursor-pointer ${
+          activeTab === "For you" ? "text-black font-bold" : "text-gray-500"
+        }`}
+        onClick={() => setActiveTab("For you")}
+      >
+        For you
+      </div>
+      <div
+        className={`w-1/2 flex justify-center py-3 font-semibold cursor-pointer ${
+          activeTab === "Following" ? "text-black font-bold" : "text-gray-500"
+        }`}
+        onClick={() => setActiveTab("Following")}
+      >
+        Following
+      </div>
+    </div>
+  );
+}
