@@ -40,7 +40,7 @@ function NavBar() {
 
       <div className="w-full flex flex-col">
         <div className="logoCont text-left m-1 w-fit">
-        <FontAwesomeIcon icon={faXTwitter} size="2xl" className="flex items-center cursor-pointer px-3 rounded-full hover:bg-gray-200 " />
+        <FontAwesomeIcon icon={faXTwitter} size="2xl" className="flex items-center cursor-pointer p-3 rounded-full hover:bg-gray-200 " />
         </div>
 
         <div className="optionsCont flex flex-col">
