@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function ContentChoose() {
   const [activeTab, setActiveTab] = useState("For you");
-
+  
   return (
     <div className="flex flex-row justify-center">
       <div
