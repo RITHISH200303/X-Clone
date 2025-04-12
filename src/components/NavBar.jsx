@@ -15,9 +15,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import "../../public/navBar.css";
-import BlackBtn from "./buttons/BlackBtn";
 import NavLabel from "../components/labels/NavLabel";
 import ProfileCont from "../components/simpleContainers/ProfileCont"
+import Postbtn from "./buttons/Postbtn";
 const logoData = [
   { label: "Home", icon: Home },
   { label: "Explore", icon: Search },
@@ -59,7 +59,7 @@ function NavBar() {
             );
           })}
           <span>
-            <BlackBtn>Post</BlackBtn>
+            <Postbtn className="w-11/12  py-3.5 px-16 rounded-full my-4">Post</Postbtn>
           </span>
         </div>
       </div>
