@@ -1,26 +1,33 @@
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck, Ellipsis, MessageCircle, Repeat2, Heart, ChartNoAxesColumn, Bookmark, Upload } from 'lucide-react';
 
 export default function PostCardMedia() {
     return (
-        <div className="w-full px-5 bg-red-50 flex flex-row">
-            <div className="bg-amber-300">
+        <div className="w-full px-5 flex flex-row">
+            <div className="">
                 <div className="w-12 pr-1 aspect-square rounded-full overflow-hidden"><img className="w-full rounded-full h-auto object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" /></div>
             </div>
-            <div className="bg-amber-800 w-full flex flex-col">
-                <div>
-                    <div className='flex flex-row py-2 border-x-2'>
+            <div className="w-full flex flex-col">
+                <div className='flex flex-row justify-between'>
+                    <div className='flex flex-row py-2'>
                         <h4>Mahatma Gandhi</h4>
                         <span><BadgeCheck className='text-blue-400 w-4 mx-1' /></span>
-                        <span>@mahatmagandhi</span>
+                        <span className='px-1'>@mahatmagandhi</span>
                         <span>.</span>
                         <span>Sep 1</span>
                     </div>
-                    <div>
-                        <p className='pb-3 hidden'></p>
+                    <div className='w-[5%]'>
+                        <div>
+                            <p className='pb-3 hidden'></p>
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-around'>
+                            <span className='w-10 rounded-full h-[90%] hover:bg-blue-100'>
+                                <Ellipsis className='text-black w-4 mx-auto my-1.5'/>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div>
-
+                </div >
+                <div className='text-start'>
+                    <p>யார் யாரெல்லாம் இத்திரைப்படத்தை இம்முறை புறக்கணிப்பீர்கள். நானும் எனது குடும்பமும் கடைசி வரையும் சென்று பார்க்க மாட்டோம்.</p>
                 </div>
                 <div>
 
@@ -31,20 +38,14 @@ export default function PostCardMedia() {
                     </div>
                 </div>
                 <div>
-                    <div><div></div>
-                        <div></div></div>
-                    <div><div></div>
-                        <div></div></div>
-                    <div><div></div>
-                        <div></div></div>
-                    <div><div></div>
-                        <div></div></div>
-                    <div><div></div>
-                        <div></div></div>
+                    <MessageCircle/>
+                    <Repeat2/>
+                    <Heart/>
+                    <ChartNoAxesColumn/>
+                    <Bookmark/>
+                    <Upload/>
                 </div>
-                <div>
-                    <div></div>
-                </div>
+
             </div>
         </div>
     )
