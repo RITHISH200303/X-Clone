@@ -22,6 +22,8 @@ export default function HomePost({ }) {
                 </div>
             </div>
             <PostCardMedia></PostCardMedia>
+            <PostCardMedia></PostCardMedia>
+            <PostCardMedia></PostCardMedia>
         </div>
     )
 };
