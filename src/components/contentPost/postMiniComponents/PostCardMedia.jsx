@@ -2,7 +2,7 @@ import { BadgeCheck, Ellipsis, MessageCircle, Repeat2, Heart, ChartNoAxesColumn,
 
 export default function PostCardMedia() {
     return (
-        <div className="w-full p-2 flex flex-row border-b-[1px] border-b-gray-200">
+        <div className="w-full py-2 px-4 flex flex-row border-b-[1px] border-b-gray-200">
             <div className="w-[8%]">
                 <div className="w-12 aspect-square rounded-full overflow-hidden"><img className="w-full rounded-full h-auto object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" /></div>
             </div>
