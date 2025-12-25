@@ -2,7 +2,7 @@ import { Image, CalendarClock, ListTodo, Smile, MapPin } from 'lucide-react';
 import { GifIcon } from '@heroicons/react/24/outline';
 import Postbtn from '../../buttons/Postbtn';
 
-export default function IconPostWrite() {
+export default function IconPostWrite({postLength}) {
   const logoClasses = "text-[#1d9bf0] w-5";
   const logoContClass = "px-2 py-1.5 rounded-full hover:bg-[#bde0f765] cursor-pointer"
 
@@ -30,7 +30,7 @@ export default function IconPostWrite() {
       </div>
 
       <div className="flex flex-row items-center">
-        <Postbtn className='py-2 px-5 rounded-full'>Post</Postbtn>
+        <Postbtn disabled = {postLength.trim().length === 0} className={`py-2 px-5 rounded-full ${postLength.trim().length === 0 ? "opacity-50 cursor-not-allowed bg-black" : "bg-black"}`}>Post</Postbtn>
       </div>
     </div>
   );

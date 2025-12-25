@@ -6,7 +6,7 @@ export default function Postbtn({children, className}) {
 
     return (
         <>
-            <div className={`${className} bg-black text-white font-semibold hover:bg-[#272C30]`} onClick={()=>setDumma(true)}>{children}</div>
+            <div className={`${className} text-white font-semibold hover:bg-[#272C30]`} onClick={()=>setDumma(true)}>{children}</div>
         </> 
     );
 };

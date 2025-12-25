@@ -1,15 +1,34 @@
 import { BadgeCheck, Ellipsis, MessageCircle, Repeat2, Heart, ChartNoAxesColumn, Bookmark, Upload } from 'lucide-react';
+import ProfileHoverCard from '../../cardComponents/ProfileHoverCard';
+import { useRef } from 'react';
 
 export default function PostCardMedia() {
+    let profileHove = useRef(null)
+    let hoverVis = useRef(false)
+    let showProfile = () => {
+        if (!hoverVis.current){
+            profileHove.current.show()
+            hoverVis.current = true
+        }
+    }
+    
+    let hideProfile = ()=>{
+        if (hoverVis.current){
+            profileHove.current.close()
+            hoverVis.current = false
+        }
+    }
+
     return (
-        <div className="w-full py-2 px-4 flex flex-row border-b-[1px] border-b-gray-200">
-            <div className="w-[8%]">
-                <div className="w-12 aspect-square rounded-full overflow-hidden"><img className="w-full rounded-full h-auto object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" /></div>
+        <div className="w-full py-2 px-4 flex flex-row border-b-[1px] border-b-gray-200 hover:bg-gray-100 transition-colors duration-550">
+            <div className="w-[8%] relative">
+                <div className="w-12 aspect-square rounded-full overflow-hidden" onMouseEnter = {showProfile} onMouseLeave = {hideProfile}><img className="w-full rounded-full h-auto object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" /></div>
+                <ProfileHoverCard ref = {profileHove}></ProfileHoverCard>
             </div>
             <div className="w-[92%] flex flex-col">
                 <div className='w-full flex flex-row justify-between'>
-                    <div className='flex flex-row py-2'>
-                        <h4>Mahatma Gandhi</h4>
+                    <div className='relative flex flex-row py-2'>
+                        <a href="x.com" className ='font-bold text-black no-underline hover:underline decoration-1' onMouseEnter = {showProfile} onMouseLeave = {hideProfile}>Mahatma Gandhi</a>
                         <span><BadgeCheck className='text-blue-400 w-4 mx-1' /></span>
                         <span className='px-1'>@mahatmagandhi</span>
                         <span>.</span>

@@ -59,7 +59,7 @@ function NavBar() {
             );
           })}
           <span>
-            <Postbtn className="w-11/12  py-3.5 px-16 rounded-full my-4">Post</Postbtn>
+            <Postbtn className="w-11/12  py-3.5 px-16 rounded-full my-4 bg-black">Post</Postbtn>
           </span>
         </div>
       </div>
