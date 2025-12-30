@@ -50,3 +50,45 @@
   -ms-overflow-style: none;  /* Hide scrollbar in IE/Edge */
   scrollbar-width: none;  /* Hide scrollbar in Firefox */
 }
+
+header{
+  width: 15%;
+  height: 100vh;
+}
+
+main{
+  height: 100vh;
+  width: 65%;
+}
+.mainBody{
+  width: 60%;
+}
+.mainFooter{
+  width: 40%;
+}
+
+@media screen and (max-width: 1020px) {
+ 
+  main{
+    width: 60% !important;
+  }
+  header{
+    width: 10%;
+  }
+  .mainBody{
+    width: 100%;
+  }
+  .mainFooter{
+    width: 0%;
+    display: none;
+  }
+}
+
+@media screen and (max-width:1300px) {
+  main{
+    width: 80%;
+  }
+  header{
+    width: 10%;
+  }
+}

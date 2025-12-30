@@ -1,6 +1,7 @@
 import { BadgeCheck, Ellipsis, MessageCircle, Repeat2, Heart, ChartNoAxesColumn, Bookmark, Upload } from 'lucide-react';
 import ProfileHoverCard from '../../cardComponents/ProfileHoverCard';
 import { useRef } from 'react';
+import postStyle from "./PostCardMedia.module.css";
 
 export default function PostCardMedia() {
     let profileHove = useRef(null)
@@ -21,11 +22,11 @@ export default function PostCardMedia() {
 
     return (
         <div className="w-full py-2 px-4 flex flex-row border-b-[1px] border-b-gray-200 hover:bg-gray-100 transition-colors duration-550">
-            <div className="w-[8%] relative">
-                <div className="w-12 aspect-square rounded-full overflow-hidden" onMouseEnter = {showProfile} onMouseLeave = {hideProfile}><img className="w-full rounded-full h-auto object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" /></div>
+            <div className={`${postStyle.postContChild1} relative`}>
+                <div className="w-11 aspect-square rounded-full overflow-hidden" onMouseEnter = {showProfile} onMouseLeave = {hideProfile}><img className="w-full rounded-full h-auto object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" /></div>
                 <ProfileHoverCard ref = {profileHove}></ProfileHoverCard>
             </div>
-            <div className="w-[92%] flex flex-col">
+            <div className={`${postStyle.postContChild2} flex flex-col`}>
                 <div className='w-full flex flex-row justify-between'>
                     <div className='relative flex flex-row py-2'>
                         <a href="x.com" className ='font-bold text-black no-underline hover:underline decoration-1' onMouseEnter = {showProfile} onMouseLeave = {hideProfile}>Mahatma Gandhi</a>

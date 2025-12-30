@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   Home,
   Mail,
@@ -27,20 +27,38 @@ const logoData = [
   { label: "Jobs", icon: Briefcase },
   { label: "Communities", icon: Users },
   { label: "Premium", icon: Zap },
-  { label: "Verified Args", icon: CheckCircle2 },
-  { label: "Profile", icon: User },
-  { label: "More", icon: CircleEllipsis }
+  // { label: "Verified Args", icon: CheckCircle2 },
+  // { label: "Profile", icon: User },
+  // { label: "More", icon: CircleEllipsis }
 ];
 
 function NavBar() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  let [activeIndex, setActiveIndex] = useState(null);
+
+  let [rootWidth, setRootWidth] = useState(() => window.innerWidth)
+  let [fontLabelDisplay, setFontLabelDisplay] = useState(rootWidth < 1300 ? true : false)
+
+  useEffect(() => {
+    function handleResize() {
+      setRootWidth(window.innerWidth)
+      if (window.innerWidth < 1300) {
+        setFontLabelDisplay(true)
+      }
+      if (window.innerWidth > 1300) {
+        setFontLabelDisplay(false)
+      }
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [rootWidth]);
+
 
   return (
-    <div className="w-60 px-1 py-2 flex flex-col justify-between h-full navBar">
+    <div className="w-full px-1 py-2 flex flex-col justify-between h-full navBar">
 
       <div className="w-full flex flex-col">
         <div className="logoCont text-left m-1 w-fit">
-        <FontAwesomeIcon icon={faXTwitter} size="2xl" className="flex items-center cursor-pointer p-3 rounded-full hover:bg-gray-200 " />
+          <FontAwesomeIcon icon={faXTwitter} size="2xl" className="flex items-center cursor-pointer p-3 rounded-full hover:bg-gray-200 " />
         </div>
 
         <div className="optionsCont flex flex-col">
@@ -54,18 +72,25 @@ function NavBar() {
                 onClick={() => setActiveIndex(index)}
               >
                 <Icon className={`w-6 h-6 mr-2 ${isActive ? "stroke-[2.5] text-black" : "stroke-[1.5] text-zinc-700"}`} />
-                <NavLabel className={`${isActive ? "font-bold text-black":"text-zinc-700"}`}>{item.label}</NavLabel>
+                <NavLabel
+                  className={`
+                  ${isActive ? "font-bold text-black" : "text-zinc-700"}
+                  ${fontLabelDisplay ? "hidden" : "block"}
+                `}
+                >
+                  {item.label}
+                </NavLabel>
               </div>
             );
           })}
           <span>
-            <Postbtn className="w-11/12  py-3.5 px-16 rounded-full my-4 bg-black">Post</Postbtn>
+            <Postbtn className="w-[90%] py-3.5 rounded-full my-4 bg-black">Post</Postbtn>
           </span>
         </div>
       </div>
       {/* Profile Section */}
-      <div className="profileCont">
-        <ProfileCont></ProfileCont>
+      <div className="profileCont w-[90%]">
+        <ProfileCont className="w-[100%]"></ProfileCont>
       </div>
     </div>
   );
