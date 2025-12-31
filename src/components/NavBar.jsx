@@ -10,7 +10,8 @@ import {
   CheckCircle2,
   Zap,
   User,
-  CircleEllipsis
+  CircleEllipsis,
+  Feather
 } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -84,13 +85,13 @@ function NavBar() {
             );
           })}
           <span>
-            <Postbtn className="w-[90%] py-3.5 rounded-full my-4 bg-black">Post</Postbtn>
+            <Postbtn className={`rounded-full my-4 bg-black ${fontLabelDisplay?"w-fit p-4":"w-[90%] py-3.5"}`} trimIcon={fontLabelDisplay}>{fontLabelDisplay? <Feather/>:"Post"}</Postbtn>
           </span>
         </div>
       </div>
       {/* Profile Section */}
-      <div className="profileCont w-[90%]">
-        <ProfileCont className="w-[100%]"></ProfileCont>
+      <div className="profileCont w-[100%]">
+        <ProfileCont className="w-[100%]" iconDisplay = {fontLabelDisplay}></ProfileCont>
       </div>
     </div>
   );

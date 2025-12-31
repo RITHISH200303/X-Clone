@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { use } from "react";
 
-export default function Postbtn({children, className}) {
+export default function Postbtn({children, className, trimIcon}) {
     const [dumma, setDumma] = useState(false)
 
     return (

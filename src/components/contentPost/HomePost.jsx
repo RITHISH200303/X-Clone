@@ -14,8 +14,8 @@ export default function HomePost({ }) {
         <div className='w-full'>
             <div className="w-full h-fit px-4 flex flex-row items-start border-solid border-b-[1px] border-gray-300/40">
                 <div className='flex flex-row w-fit py-2 mr-3'>
-                    <div className="w-12 flex flex-col justify-start aspect-square rounded-full overflow-hidden">
-                        <img className="w-full h-full rounded-full object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" />
+                    <div className="w-11 flex flex-col justify-start aspect-square rounded-full overflow-hidden">
+                        <img className="w-full h-full rounded-full object-cover" src="https://i.pinimg.com/736x/76/5b/bc/765bbc893a035f5517d151a411f5df72.jpg" alt="" />
                     </div>
                 </div>
                 <div className='w-full flex flex-col justify-center items-start pt-3.5 text-lg text-gray-800 font-medium'>

@@ -23,7 +23,7 @@ export default function PostCardMedia() {
     return (
         <div className="w-full py-2 px-4 flex flex-row border-b-[1px] border-b-gray-200 hover:bg-gray-100 transition-colors duration-550">
             <div className={`${postStyle.postContChild1} relative`}>
-                <div className="w-11 aspect-square rounded-full overflow-hidden" onMouseEnter = {showProfile} onMouseLeave = {hideProfile}><img className="w-full rounded-full h-auto object-cover" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" alt="" /></div>
+                <div className="w-11 aspect-square rounded-full overflow-hidden" onMouseEnter = {showProfile} onMouseLeave = {hideProfile}><img className="w-full rounded-full h-auto object-cover" src="https://i.pinimg.com/736x/76/5b/bc/765bbc893a035f5517d151a411f5df72.jpg    " alt="" /></div>
                 <ProfileHoverCard ref = {profileHove}></ProfileHoverCard>
             </div>
             <div className={`${postStyle.postContChild2} flex flex-col`}>
