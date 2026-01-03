@@ -3,6 +3,7 @@ export default function Footer({ className }) {
         <div className={className}>
             <p>More content goes here...</p><br />
             <p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br />
+            <p>test</p>
         </div>
     )
 }
