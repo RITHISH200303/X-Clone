@@ -30,7 +30,7 @@ export default function IconPostWrite({postLength}) {
       </div>
 
       <div className="flex flex-row items-center">
-        <Postbtn disabled = {postLength.trim().length === 0} className={`py-2 px-5 rounded-full ${postLength.trim().length === 0 ? "opacity-50 cursor-not-allowed bg-black" : "bg-black"}`}>Post</Postbtn>
+        <Postbtn disabled = {postLength.trim().length === 0} className={`py-1 px-3.5 rounded-full ${postLength.trim().length === 0 ? "opacity-50 cursor-not-allowed bg-black" : "bg-black"}`}>Post</Postbtn>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export default function Postbtn({children, className, trimIcon}) {
 
     return (
         <>
-            <div className={`${className} text-white font-semibold hover:bg-[#272C30]`} onClick={()=>setDumma(true)}>{children}</div>
+            <div className={`${className} text-lg text-white font-semibold hover:bg-[#272C30]`} onClick={()=>setDumma(true)}>{children}</div>
         </> 
     );
 };
