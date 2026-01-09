@@ -31,7 +31,7 @@ export default forwardRef(function ProfileHoverCard({onMouseEnter, onMouseLeave}
                         <FollowButton/>
                     </div>
                 </div>
-                <div className="flex flex-col py-2 text-left">
+                <div className="flex flex-col my-2 text-left">
                     <div className="flex flex-row">
                         <a href="x.com" className ='font-bold text-black no-underline hover:underline decoration-1 outline-none truncate'>Mahatma Gandhi</a>
                         <span><BadgeCheck className='text-blue-400 w-4 mx-1' /></span>
@@ -41,12 +41,12 @@ export default forwardRef(function ProfileHoverCard({onMouseEnter, onMouseLeave}
                 <div className="break-words text-left">
                     நாய் நன்றி உள்ளதா இருந்தாலும் அதற்கு ‘தாங்க் யூ’ சொல்ல தெரியாது..
                 </div>
-                <div className="flex flex-row text-left items-start text-m py-2">
+                <div className="flex flex-row text-left items-start text-m my-4">
                     <a href="" className="pr-3"><b>379 </b><span>Following</span></a>
                     <a href=""><b>2,582 </b><span>Followers</span></a>
                 </div>
                 <div>
-                    <ProfileSummery></ProfileSummery>
+                    <ProfileSummery className=""></ProfileSummery>
                 </div>
                 
             </dialog>
