@@ -13,7 +13,7 @@ function App() {
         </header>
         <main className="flex flex-row">
           <MainBody className="mainBody overflow-y-auto no-scrollbar border-solid border-x-[1px] border-gray-300/40" />
-          <Footer  className="mainFooter overflow-auto"/>
+          <Footer  className="mainFooter overflow-auto py-1"/>
         </main>
       </div>
     </div>

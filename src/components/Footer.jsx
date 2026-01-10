@@ -1,9 +1,13 @@
+import Subscription from "./extras/Subscription"
+import SearchBar from "./extras/SearchBar"
+
 export default function Footer({ className }) {
     return (
         <div className={className}>
-            <p>More content goes here...</p><br />
-            <p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br /><p>More content goes here...</p><br />
-            <p>test</p>
+            <div className="flex flex-col w-[90%] gap-5 text-left">
+                <SearchBar className="w-[95%]"/>
+                <Subscription className="w-90% px-5 py-4 flex flex-col gap-3 rounded-lg border-solid border-1 border-gray-300/40"/>
+            </div>
         </div>
     )
 }

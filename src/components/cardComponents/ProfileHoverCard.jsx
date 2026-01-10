@@ -48,7 +48,6 @@ export default forwardRef(function ProfileHoverCard({onMouseEnter, onMouseLeave}
                 <div>
                     <ProfileSummery className=""></ProfileSummery>
                 </div>
-                
             </dialog>
             </div>
         )
