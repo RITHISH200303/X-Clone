@@ -1,0 +1,7 @@
+.searchParent {
+    border: 1px solid rgb(182, 182, 182);
+}
+
+.searchParent:focus-within {
+    border: 2px solid rgb(29, 155, 240);
+}
