@@ -1,9 +1,7 @@
-export default function SubscribeBtn(){
+export default function SubscribeBtn({className}){
     return(
-        <div>
-            <div>
-                Subscribe
-            </div>
+        <div className={className}>
+            Subscribe
         </div>
     )
 }
