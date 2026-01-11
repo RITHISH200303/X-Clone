@@ -9,7 +9,7 @@ export default function Subscription({className}){
         <p>
             Subscribe to unlock new features and if eligible, receive a share of revenue.
         </p>
-        <SubscribeBtn/>
+        <SubscribeBtn className="bg-[rgb(29,155,240)] w-[35%] text-center text-white py-1.5 rounded-3xl font-bold"/>
     </div>
     ) 
 }
