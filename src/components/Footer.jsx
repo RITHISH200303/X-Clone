@@ -8,7 +8,7 @@ export default function Footer({ className }) {
             <div className="flex flex-col w-[90%] gap-5 text-left">
                 <SearchBar className="w-[95%]"/>
                 <Subscription className="w-90% px-5 py-4 flex flex-col gap-3 rounded-lg border-solid border-1 border-gray-300/40"/>
-                <TodaysNews className="w-90% px-5 py-4 flex flex-col gap-3 rounded-lg border-solid border-1 border-gray-300/40"/>
+                <TodaysNews className="w-90% flex flex-col justify-around rounded-lg border-solid border-1 border-gray-300/40"/>
             </div>
         </div>
     )
