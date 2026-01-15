@@ -28,7 +28,7 @@ export default function TodaysNews({ className }) {
           <X className="w-5"></X>
         </span>
       </div>
-      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3.5 justify-center">
+      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center">
         <p className="line-clamp-2 font-bold">
           Fans of Vijay clash with fans of Siva Kartikeyan over Jana Nayagan
           trailer views and Parasakthi film performance
@@ -38,8 +38,37 @@ export default function TodaysNews({ className }) {
             <ProfileRepeat simplePtofile={simplePtofile} />
           </div>
           <div className=" inline gap-3 px-1">
-            <span className="shrink-0">2 hours ago</span>
-            <span className="truncate">Trending now · Entertainment ·</span>
+            <span className="truncate">
+              2 hours ago . Trending now · Entertainment
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center">
+        <p className="line-clamp-2 font-bold">
+          Crew-11 Astronauts Splash Down Safely After 167 Days in Space
+        </p>
+        <div className="flex flex-nowrap text-sm mb-2">
+          <div className="flex-none w-[16%]">
+            <ProfileRepeat simplePtofile={simplePtofile} />
+          </div>
+          <div className=" inline gap-3 px-1">
+            <span className="truncate">8 hours ago . Trending now · News</span>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center">
+        <p className="line-clamp-2 font-bold">
+          Allu Arjun Teams with Lokesh Kanagaraj for #AA23 Blockbuster
+        </p>
+        <div className="flex flex-nowrap text-sm mb-2">
+          <div className="flex-none w-[16%]">
+            <ProfileRepeat simplePtofile={simplePtofile} />
+          </div>
+          <div className=" inline gap-3 px-1">
+            <span className="truncate">
+              8 hours ago . Trending now · Entertainment
+            </span>
           </div>
         </div>
       </div>
