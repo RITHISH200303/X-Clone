@@ -23,12 +23,12 @@ export default function TodaysNews({ className }) {
   return (
     <div className={className}>
       <div className="flex flex-row justify-between px-5 py-3">
-        <p className="font-bold text-xl">Today's News</p>
+        <p className="font-extrabold text-xl">Today's News</p>
         <span className="px-1.5 py-1 cursor-pointer rounded-full hover:bg-gray-200">
           <X className="w-5"></X>
         </span>
       </div>
-      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center">
+      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center cursor-pointer">
         <p className="line-clamp-2 font-bold">
           Fans of Vijay clash with fans of Siva Kartikeyan over Jana Nayagan
           trailer views and Parasakthi film performance
@@ -37,14 +37,14 @@ export default function TodaysNews({ className }) {
           <div className="flex-none w-[16%]">
             <ProfileRepeat simplePtofile={simplePtofile} />
           </div>
-          <div className=" inline gap-3 px-1">
+          <div className="inline gap-3 px-1 text-gray-600">
             <span className="truncate">
               2 hours ago . Trending now · Entertainment
             </span>
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center">
+      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center cursor-pointer">
         <p className="line-clamp-2 font-bold">
           Crew-11 Astronauts Splash Down Safely After 167 Days in Space
         </p>
@@ -52,12 +52,12 @@ export default function TodaysNews({ className }) {
           <div className="flex-none w-[16%]">
             <ProfileRepeat simplePtofile={simplePtofile} />
           </div>
-          <div className=" inline gap-3 px-1">
+          <div className=" inline gap-3 px-1 text-gray-600">
             <span className="truncate">8 hours ago . Trending now · News</span>
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center">
+      <div className="flex flex-col gap-2 hover:bg-gray-100 w-full px-5 py-3 justify-center cursor-pointer">
         <p className="line-clamp-2 font-bold">
           Allu Arjun Teams with Lokesh Kanagaraj for #AA23 Blockbuster
         </p>
@@ -65,7 +65,7 @@ export default function TodaysNews({ className }) {
           <div className="flex-none w-[16%]">
             <ProfileRepeat simplePtofile={simplePtofile} />
           </div>
-          <div className=" inline gap-3 px-1">
+          <div className=" inline gap-3 px-1 text-gray-600">
             <span className="truncate">
               8 hours ago . Trending now · Entertainment
             </span>
