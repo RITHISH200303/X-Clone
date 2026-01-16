@@ -2,6 +2,7 @@ import Subscription from "./extras/Subscription"
 import SearchBar from "./extras/SearchBar"
 import TodaysNews from "./extras/TodaysNews"
 import WhatHappening from "./extras/WhatHappening"
+import WhoToFollow from "./extras/WhoToFollow"
 
 export default function Footer({ className }) {
     return (
@@ -11,6 +12,7 @@ export default function Footer({ className }) {
                 <Subscription className="w-90% px-5 py-4 flex flex-col gap-3 rounded-lg border-solid border-1 border-gray-300/40"/>
                 <TodaysNews className="w-90% flex flex-col justify-around rounded-lg border-solid border-1 border-gray-300/40"/>
                 <WhatHappening className="w-90% flex flex-col justify-around rounded-lg border-solid border-1 border-gray-300/40"></WhatHappening>
+                <WhoToFollow className="w-90% flex flex-col justify-around rounded-lg border-solid border-1 border-gray-300/40"></WhoToFollow>
             </div>
         </div>
     )
