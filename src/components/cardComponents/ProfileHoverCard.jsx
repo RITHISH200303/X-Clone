@@ -28,7 +28,7 @@ export default forwardRef(function ProfileHoverCard({onMouseEnter, onMouseLeave}
                         <img className="w-full h-full object-cover" src="https://i.pinimg.com/736x/76/5b/bc/765bbc893a035f5517d151a411f5df72.jpg" alt=""/>
                     </div>
                     <div className="w-fit text-black text-[1rem] font-bold">
-                        <FollowButton/>
+                        <FollowButton insideText={"Following"}/>
                     </div>
                 </div>
                 <div className="flex flex-col my-2 text-left">
