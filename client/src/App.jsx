@@ -8,7 +8,7 @@ function App() {
   let [backendData, setBackendData] = useState({ users: [] });
 
   useEffect(() => {
-    fetch("/signup")
+    fetch("/api/signup")
       .then(response => response.json())
       .then(data => {
         setBackendData(data);
