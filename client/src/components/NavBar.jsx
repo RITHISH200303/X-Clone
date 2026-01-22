@@ -52,8 +52,7 @@ function NavBar() {
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [rootWidth]);
-
-
+  
   return (
     <div className="w-full px-1 py-2 flex flex-col justify-between h-full navBar">
 
