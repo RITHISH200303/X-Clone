@@ -1,8 +1,8 @@
-import Subscription from "./extras/Subscription"
-import SearchBar from "./extras/SearchBar"
-import TodaysNews from "./extras/TodaysNews"
-import WhatHappening from "./extras/WhatHappening"
-import WhoToFollow from "./extras/WhoToFollow"
+import Subscription from "../extras/Subscription"
+import SearchBar from "../extras/SearchBar"
+import TodaysNews from "../extras/TodaysNews"
+import WhatHappening from "../extras/WhatHappening"
+import WhoToFollow from "../extras/WhoToFollow"
 
 export default function Footer({ className }) {
     return (

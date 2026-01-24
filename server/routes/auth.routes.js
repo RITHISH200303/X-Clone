@@ -4,6 +4,6 @@ const authController = require('../controllers/auth.controller')
 
 const router = express.Router();
 
-router.get('/api/signup',authController.getSignup)
+router.get('/api/home',authController.getHome)
 
 module.exports = router
