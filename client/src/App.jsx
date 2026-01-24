@@ -8,6 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Home getRoute={"/api/home"} />} />
+          {/* test commit */}
         </Routes>
       </BrowserRouter>
     </div>
