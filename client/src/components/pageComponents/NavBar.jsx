@@ -15,10 +15,10 @@ import {
 } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import "../../public/navBar.css";
-import NavLabel from "../components/labels/NavLabel";
-import ProfileCont from "../components/contentPost/postMiniComponents/ProfileCont"
-import Postbtn from "./buttons/Postbtn";
+import "../../../public/navBar.css";
+import NavLabel from "../labels/NavLabel";
+import ProfileCont from "../contentPost/postMiniComponents/ProfileCont"
+import Postbtn from "../buttons/Postbtn";
 const logoData = [
   { label: "Home", icon: Home },
   { label: "Explore", icon: Search },

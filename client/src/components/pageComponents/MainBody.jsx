@@ -1,6 +1,6 @@
-import ContentChoose from "./buttons/ContentChoose";
-import '../../public/mainBody.css'
-import HomePost from "./contentPost/HomePost";
+import ContentChoose from "../buttons/ContentChoose";
+import '../../../public/mainBody.css'
+import HomePost from "../contentPost/HomePost";
 export default function MainBody({ className }) {
   return (
     <div className={`${className} relative h-screen`}>
