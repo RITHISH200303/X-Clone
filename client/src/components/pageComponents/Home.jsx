@@ -12,8 +12,7 @@ export default function Home({ getRoute }) {
     let isMounted = true;
     async function fetchData() {
       try {
-        const data = getHomeData();
-        console.log(data)
+        const data = await getHomeData();
         if (isMounted) {
           setUserData(data);
         }
