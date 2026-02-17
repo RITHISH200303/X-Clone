@@ -1,8 +1,10 @@
-import { forwardRef } from "react"
+import { forwardRef, useState } from "react"
 import FollowButton from "../buttons/FollowButton"
 import { BadgeCheck } from "lucide-react"
 import { useRef } from "react"
 import ProfileSummery from "../buttons/ProfileSummery"
+import { useContext } from "react"
+import { UserDataContext } from "../../store/user-data-context"
 
 export default forwardRef(function ProfileHoverCard({onMouseEnter, onMouseLeave},hovref){
         let hoveEntered = useRef(true)
@@ -19,13 +21,14 @@ export default forwardRef(function ProfileHoverCard({onMouseEnter, onMouseLeave}
                 hoveEntered.current = true
             }
         }
+        let profileData = useContext(UserDataContext)
 
         return(
             <div onMouseEnter={onHovEnter} onMouseLeave={onHovLeave}>
             <dialog ref={hovref} className="bg-light-50 w-80 absolute top-9 left-0 p-4 rounded outline-none rounded-2xl text-m" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 <div className="flex flex-row justify-between w-full">
                     <div className="w-14 flex flex-col justify-start aspect-square rounded-full overflow-hidden">
-                        <img className="w-full h-full object-cover" src="https://i.pinimg.com/736x/76/5b/bc/765bbc893a035f5517d151a411f5df72.jpg" alt=""/>
+                        <img className="w-full h-full object-cover" src={profileData.userData.user_data.profile_image} alt=""/>
                     </div>
                     <div className="w-fit text-black text-[1rem] font-bold">
                         <FollowButton insideText={"Following"}/>
