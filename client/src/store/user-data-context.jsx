@@ -1,5 +1,6 @@
 import { createContext } from "react";
 
 export const UserDataContext = createContext({
-    items:[]
-})
+  userData: { user_data:{}, path: "" },
+  setUserData: () => {}
+});
