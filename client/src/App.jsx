@@ -37,7 +37,7 @@ function App() {
           />
           <Route
             path="/profile"
-            element={<Home getRoute={"/api/user"} path="profile" />}
+            element={<Home path="profile" />}
           />
           <Route
             path="/premium"
