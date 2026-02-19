@@ -1,20 +1,24 @@
 import NavBar from "./NavBar";
 import MainBody from "./MainBody";
 import Footer from "./Footer";
+import UserProfile from "../pageSections/userProfileSection/UserProfile";
 import "../../App.css";
 import { UserDataContext } from "../../store/user-data-context";
 import { useEffect, useState } from "react";
 import { getHomeData } from "../../api/home.api";
 
-export default function Home({ path }) {
-  let [userData, setUserData] = useState({ user_data:{}, path:"" });
+export default function Home() {
+  let [userData, setUserData] = useState({ user_data: {}, path: "" });
   useEffect(() => {
     let isMounted = true;
     async function fetchData() {
       try {
         const data = await getHomeData();
         if (isMounted) {
-          setUserData({user_data:data, path:window.location.pathname.slice(1)})
+          setUserData({
+            user_data: data,
+            path: window.location.pathname.slice(1),
+          });
         }
       } catch (error) {
         if (!isMounted) {
@@ -25,22 +29,28 @@ export default function Home({ path }) {
     fetchData();
     return () => {
       isMounted = false;
-      setUserData({user_data:{}, path:""});
     };
-  },[]);
-  
+  }, []);
+  let mainBody;
+
+  if (userData.path == "home") {
+    mainBody = (
+      <MainBody className="mainBody overflow-y-auto no-scrollbar border-solid border-x-[1px] border-gray-300/40" />
+    );
+  } else {
+    mainBody = <UserProfile className="mainBody overflow-y-auto no-scrollbar border-solid border-x-[1px] border-gray-300/40"/>;
+  }
+
   return (
-    <UserDataContext.Provider value={{userData, setUserData}}>
+    <UserDataContext.Provider value={{ userData, setUserData }}>
       <div className="max-w-full max-h-full">
         <div className="w-full m-0 pt-0 pb-0 flex flex-row h-screen justify-center">
           <header className="flex justify-end w-auto">
             <NavBar />
           </header>
           <main className="flex flex-row">
-            {
-              
-            }
-            <MainBody className="mainBody overflow-y-auto no-scrollbar border-solid border-x-[1px] border-gray-300/40" />
+            {mainBody}
+            {/* <MainBody className="mainBody overflow-y-auto no-scrollbar border-solid border-x-[1px] border-gray-300/40" /> */}
             <Footer className="mainFooter overflow-auto py-1" />
           </main>
         </div>

@@ -135,34 +135,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-// import { createContext, useContext, useEffect, useState } from "react";
-// import { useSearchParams } from "react-router-dom";
-
-// const SearchContext = createContext();
-
-// export const SearchProvider = ({ children }) => {
-//   const [searchParams, setSearchParams] = useSearchParams();
-//   const [filters, setFilters] = useState({});
-
-//   // Sync URL → Context (NO reload)
-//   useEffect(() => {
-//     const params = Object.fromEntries([...searchParams]);
-//     setFilteparamsrs();
-//   }, [searchParams]);
-
-//   // Update URL (which updates UI)
-//   const updateFilter = (key, value) => {
-//     const newParams = new URLSearchParams(searchParams);
-//     newParams.set(key, value);
-//     setSearchParams(newParams);
-//   };
-
-//   return (
-//     <SearchContext.Provider value={{ filters, updateFilter }}>
-//       {children}
-//     </SearchContext.Provider>
-//   );
-// };
-
-// export const useSearch = () => useContext(SearchContext);
