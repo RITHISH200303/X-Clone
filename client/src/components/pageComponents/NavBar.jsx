@@ -43,9 +43,10 @@ function NavBar() {
     rootWidth < 1300 ? true : false,
   );
   let {userData, setUserData} = useContext(UserDataContext);
-  let [activeIndex, setActiveIndex] = useState(0);
+  let [activeIndex, setActiveIndex] = useState();
   let navigate = useNavigate();
-  let [urlPath, setUrlPath] = useState(userData.user_data.path);
+  let [urlPath, setUrlPath] = useState(userData.path);
+  
   // -----------------------------checking_browser_screen_size--------------------------------
   useEffect(() => {
     function handleResize() {
@@ -85,7 +86,7 @@ function NavBar() {
             <FontAwesomeIcon
               icon={faXTwitter}
               size="2xl"
-              className="flex items-center cursor-pointer p-3 rounded-full hover:bg-gray-200 "
+              className="flex items-center cursor-pointer p-3 rounded-full hover:bg-gray-200"
             />
           </div>
 

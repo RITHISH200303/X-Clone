@@ -1,20 +1,15 @@
 import "./App.css";
 import Home from "./components/pageComponents/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Lobby from "./components/pageComponents/Lobby";
 
 function App() {
   return (
     <div className="max-w-full max-h-full">
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/home"
-            element={<Home path="home" />}
-          />
-          <Route
-            path="/explore"
-            element={<Home getRoute={"/api/profile"} path="profile" />}
-          />
+          <Route path="/home" element={<Home path="home" />} />
+          <Route path="/explore" element={<Home path="explore" />} />
           <Route
             path="/notification"
             element={<Home getRoute={"/api/profile"} path="profile" />}
@@ -27,7 +22,7 @@ function App() {
             path="/bookmarks"
             element={<Home getRoute={"/api/profile"} path="profile" />}
           />
-            <Route
+          <Route
             path="/jobs"
             element={<Home getRoute={"/api/profile"} path="profile" />}
           />
@@ -35,10 +30,7 @@ function App() {
             path="/communites"
             element={<Home getRoute={"/api/profile"} path="profile" />}
           />
-          <Route
-            path="/profile"
-            element={<Home path="profile" />}
-          />
+          <Route path="/profile" element={<Home path="profile" />} />
           <Route
             path="/premium"
             element={<Home getRoute={"/api/profile"} path="profile" />}
@@ -47,6 +39,7 @@ function App() {
             path="/premium"
             element={<Home getRoute={"/api/profile"} path="profile" />}
           />
+          <Route path="/" element={<Lobby />} />
         </Routes>
       </BrowserRouter>
     </div>

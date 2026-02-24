@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 import { getHomeData } from "../../api/home.api";
 
 export default function Home() {
-  let [userData, setUserData] = useState({ user_data: {}, path: "" });
+  let [userData, setUserData] = useState({ user_data: {}, path: window.location.pathname.slice(1) });
+  
   useEffect(() => {
     let isMounted = true;
     async function fetchData() {

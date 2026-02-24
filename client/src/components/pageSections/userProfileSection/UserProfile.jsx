@@ -1,7 +1,7 @@
 import "./userProfile.css";
 import { EditProfile } from "../../buttons/EditProfile";
-import { ArrowLeft } from "lucide-react";
-import { Search } from "lucide-react";
+import { ArrowLeft, Search, CalendarDays, ChevronRight } from "lucide-react";
+import ActionSwitch from "./actionSwitch/ActionSwitch";
 
 export default function UserProfile({ className }) {
   return (
@@ -48,8 +48,23 @@ export default function UserProfile({ className }) {
             <span></span>
           </div>
           <div className="font-medium text-gray-500">@mahatmagandhi</div>
-          <div className="text-lg mt-3">comments</div>
+          <div className="text-lg my-3">comments</div>
+          <div className="flex flex-row w-auto my-3 text-md items-center text-gray-600 cursor-pointer">
+            <div>
+              <CalendarDays className="w-4.5" />
+            </div>
+            <div className="mx-1 hover:underline">Joined August 2021</div>
+            <div>
+              <ChevronRight className="w-5" />
+            </div>
+          </div>
         </div>
+      </div>
+      <div>
+        <ActionSwitch/>
+      </div>
+      <div>
+        
       </div>
     </div>
   );
