@@ -3,7 +3,7 @@ const db = require("../data/database");
 function getSignup(req, res) {
   res.json({ users: ["userOne"] });
 }
-async function getHome(req, res) {
+async function getUser(req, res) {
   try {
     const userData = await db.getDb().collection("user").findOne({
       email: "pullingogandhi@xmail.com",
@@ -20,5 +20,5 @@ async function getHome(req, res) {
 
 module.exports = {
   getSignup: getSignup,
-  getHome: getHome,
+  getHome: getUser,
 };

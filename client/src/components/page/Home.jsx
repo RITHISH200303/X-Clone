@@ -5,7 +5,7 @@ import UserProfile from "../pageSections/userProfileSection/UserProfile";
 import "../../App.css";
 import { UserDataContext } from "../../store/user-data-context";
 import { useEffect, useState } from "react";
-import { getHomeData } from "../../api/home.api";
+import { getUserData } from "../../api/user.api";
 
 export default function Home() {
   let [userData, setUserData] = useState({ user_data: {}, path: window.location.pathname.slice(1) });
@@ -14,7 +14,7 @@ export default function Home() {
     let isMounted = true;
     async function fetchData() {
       try {
-        const data = await getHomeData();
+        const data = await getUserData();
         if (isMounted) {
           setUserData({
             user_data: data,
