@@ -1,5 +1,5 @@
 import { BadgeCheck, Ellipsis, MessageCircle, Repeat2, Heart, ChartNoAxesColumn, Bookmark, Upload } from 'lucide-react';
-import ProfileHoverCard from '../../cardComponents/ProfileHoverCard';
+import ProfileHoverCard from '../../card/ProfileHoverCard';
 import { useRef } from 'react';
 import postStyle from "./PostCardMedia.module.css";
 import ProfileLogo from "./ProfileLogo"

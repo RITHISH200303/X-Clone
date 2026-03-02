@@ -1,7 +1,7 @@
 import "./App.css";
-import Home from "./components/pageComponents/Home";
+import Home from "./components/page/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Lobby from "./components/pageComponents/Lobby";
+import Lobby from "./components/page/Lobby";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React, { useRef, useState, useEffect, useContext } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import {
   Home,
   Mail,
@@ -80,7 +80,7 @@ function NavBar() {
   }, [urlPath]);
 
   return (
-      <div className="w-full px-1 py-2 flex flex-col justify-between h-full navBar">
+      <div className="w-full px-1 py-2 flex flex-col justify-between h-full navBar static">
         <div className="w-full flex flex-col">
           <div className="logoCont text-left m-1 w-fit">
             <FontAwesomeIcon
