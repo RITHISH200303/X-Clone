@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect, useContext } from "react";
+import useWindowChange from "../../hooks/useWindowChange";
 import {
   Home,
   Mail,
@@ -38,29 +39,33 @@ const logoData = [
 import { UserDataContext } from "../../store/user-data-context";
 
 function NavBar() {
-  let [rootWidth, setRootWidth] = useState(() => window.innerWidth);
-  let [fontLabelDisplay, setFontLabelDisplay] = useState(
-    rootWidth < 1300 ? true : false,
-  );
+  // let displayWidth = useWindowChange()
+  // let [fontLabelDisplay, setFontLabelDisplay] = useState(
+  //   window.innerWidth < 1300 ? true : false,
+  // );
+  let fontLabelDisplay = useWindowChange(1300)
   let {userData, setUserData} = useContext(UserDataContext);
   let [activeIndex, setActiveIndex] = useState();
   let navigate = useNavigate();
   let [urlPath, setUrlPath] = useState(userData.path);
   
   // -----------------------------checking_browser_screen_size--------------------------------
-  useEffect(() => {
-    function handleResize() {
-      setRootWidth(window.innerWidth);
-      if (window.innerWidth < 1300) {
-        setFontLabelDisplay(true);
-      }
-      if (window.innerWidth > 1300) {
-        setFontLabelDisplay(false);
-      }
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [rootWidth]);
+  // useEffect(()=>{
+  //   setFontLabelDisplay(displayWidth)
+  // },[window])
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setRootWidth(window.innerWidth);
+  //     if (window.innerWidth < 1300) {
+  //       setFontLabelDisplay(true);
+  //     }
+  //     if (window.innerWidth > 1300) {
+  //       setFontLabelDisplay(false);
+  //     }
+  //   }
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, [rootWidth]);
 
   // ----------------------------------------setting up the active index----------------------------------
   useEffect(() => {
