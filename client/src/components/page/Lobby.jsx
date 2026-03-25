@@ -1,15 +1,17 @@
 import x_logo from "../../../public/x_logo.png";
 import LoginButton from "../buttons/LoginButton";
+import useWindowChange from "../../hooks/useWindowChange";
+import '../../../public/lobby.css'
 
 export default function Lobby() {
   return (
-    <div className="w-screen h-screen flex flex-row justify-center">
-      <div className="w-auto h-auto m-auto">
-        <img src={x_logo} className="w-[330px] m-auto" alt="" />
+    <div className="lobby-cont">
+      <div className="m-auto">
+        <img src={x_logo} className="x-logo" alt="" />
       </div>
-      <div className="w-auto m-auto font-sans text-left">
-        <h2 className="text-7xl font-extrabold my-16">Hapenning now</h2>
-        <h3 className="text-4xl font-sans font-extrabold my-7">Join today</h3>
+      <div className="m-auto font-sans text-left">
+        <h2 className="font-extrabold">Hapenning now</h2>
+        <h3 className="font-sans font-extrabold">Join today</h3>
         <div className="">
           <LoginButton logBrand="google" />
           <LoginButton logBrand="apple" />
@@ -20,8 +22,18 @@ export default function Lobby() {
           </div>
           <LoginButton logBrand="create" />
           <div className="text-[12px] text-wrap w-[295px] my-4">
-            By signing up, you agree to the <a href="" className="text-[rgb(29,155,240)] hover:underline">Terms of Service</a> and <a href="" className="text-[rgb(29,155,240)] hover:underline">Privacy Policy, </a>
-            including <a href="" className="text-[rgb(29,155,240)] hover:underline">Cookie Use.</a>
+            By signing up, you agree to the{" "}
+            <a href="" className="text-[rgb(29,155,240)] hover:underline">
+              Terms of Service
+            </a>{" "}
+            and{" "}
+            <a href="" className="text-[rgb(29,155,240)] hover:underline">
+              Privacy Policy,{" "}
+            </a>
+            including{" "}
+            <a href="" className="text-[rgb(29,155,240)] hover:underline">
+              Cookie Use.
+            </a>
           </div>
         </div>
         <div className="my-10">
